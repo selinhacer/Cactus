@@ -1,0 +1,232 @@
+</doctypehtml>    <!-- Indique qu'il s'agit d'une page web -->
+
+      <html>      <!-- Balise principale du code, continet tout le contenu du code -->
+
+            <head>      <!-- L'en-tête, contient infos générales sur la page ( infos pour l'ordi, ne s'affichent pas ) -->
+                  <meta charset="utf-8"/>       <!-- Encodage indique la façon dont le fichier est enregistrer, içi : pour les accents -->
+                  <link rel="stylesheet" href="Pro.css"/>
+                  <link rel="php" href="cible.php"/>
+                  <link rel="stylesheet" href="8reines.css">
+                  <title>8 Reines</title>       <!-- Titre de la page, affiché dans l'onglet -->
+            </head>
+
+            <body>      <!-- Corps, partie principale de la page ( tout s'affichent ) -->
+
+                  <header>
+
+                        <h1>Le jeu des 8 <em>Reines</em></h1>
+                        <img class="img" src= "https://i.etsystatic.com/13221305/r/il/a22aa5/1217314060/il_794xN.1217314060_jha1.jpg"/>
+
+                  </header>
+
+                  <nav>
+
+                        <h2>Sommaire</h2>
+                        <img class="img" src= "https://n6-img-fp.akamaized.net/icones-gratuites/reine-piece-d-39-echecs-forme-noire_318-60263.jpg?size=338&ext=jpg"/>
+
+                        <ol>
+                              <li><a href="#accueil">Accueil</a></li>
+                              <li><a href="#inscription">Inscription</a></li>
+                              <li><a href="#explications">Explications</a></li>
+                              <li><a href="#jeu">Jeu</a></li>
+                              <li><a href="#rappel">Rappel</a></li>
+                              <li><a href="#solutions">Solutions</a></li>
+                        </ol>
+                  </nav>
+
+                  <section id="inscription" id="accueil">
+
+                        <h2>Accueil</h2>
+
+                        <p>
+                              Bienvenue à tous ! <br/>
+                              Voici un jeu qui va bien faire travailler votre cerveau, et peut-être même vous amenez à casser l'écran de votre ordinateur. <br/>
+                              <strong>ATTENTION !</strong> Ce n'est pas si facile que ça en à l'air. <br/>
+                              Mais tout d'abord <strong>INSCRIVEZ-VOUS !</strong> <br/>
+                              Inventez un pseudo, choisissez-vous une couleur et indiquer le niveau que vous pensez avoir ( avec le curseur ).
+                        </p>
+
+                        <article id="inscription">
+
+                              <h3>Inscription</h3>
+
+                              <form method="post" action="traitement.php">
+                              <form action="cible.php" method="post">
+
+                              <p>
+                                    <fieldset>
+
+                                          <legend>Vos coordonnées</legend>    <!-- Titre du fieldset -->
+
+                                          <label for="pseudo">Pseudo:</label>
+                                          <input type="text" name="pseudo" id="pseudo" size="20" maxlength="15"
+                                          placeholder="Ex : Hulk" required/> <br/>
+      
+                                          <label for="pass">Mot de passe:</label>
+                                          <input type="password" name="pass" id="pass" required/> <br/>
+                                          
+                                          <label for="date">Date de naissance:</label>
+                                          <input type="date"/> <br/>
+      
+                                          <label for="age">Âge:</label>
+                                          <input type="number" min= 0 max= 50/> <br/>
+
+                                          <label for="numero">Numéro de téléphone:</label>
+                                          <input type="tel"/> <br/>
+
+                                          <label for="mail">Mail:</label>
+                                          <input type="email" required/> <br/>
+
+                                          <label for="pays">Dans quel pays habitez-vous ?</label> <br/>
+                                    
+                                          <select name="pays" id="pays">
+                                                <optgroup label="Europe">
+                                                      <option value="allemagne">Allemagne</option>
+                                                      <option value="espagne">Espagne</option>
+                                                      <option value="france">France</option>
+                                                      <option value="italie">Italie</option>
+                                                      <option value="royaume-uni">Royaume-Uni</option>
+                                                </optgroup>
+
+                                                <optgroup label="Amérique du Nord">
+                                                      <option value="canada">Canada</option>
+                                                      <option value="etats-unis">Etats-Unis</option>
+                                                </optgroup>
+
+                                                <optgroup label="Amerique du Sud">
+                                                      <option value="argentine">Argentine</option>
+                                                      <option value="bresil">Brésil</option>
+                                                      <option value="colombie">Colombie</option>
+                                                      <option value="venezuela">Venezuela</option>
+                                                </optgroup>
+
+                                                <optgroup label="Asie">
+                                                      <option value="chine">Chine</option>
+                                                      <option value="japon">Japon</option>
+                                                      <option value="thailande">Thaïlande</option>
+                                                      <option value="taiwan">Taïwan</option>
+                                                      <option value="turquie">Turquie</option>
+                                                </optgroup>
+
+                                                <optgroup label="Océanie">
+                                                      <option value="australie">Australie</option>
+                                                      <option value="nouvelle-zélande">Nouvelle-Zélande</option>
+                                                </optgroup>
+
+                                          </select>
+
+                                    </fieldset>
+                              </p>
+
+                              <p>
+                                    <fieldset>
+
+                                          <legend>Pour en apprendre d'avantage sur vous !</legend>
+
+                                          <label for="niveau">Niveau:</label>
+                                          <input type="range"/> <br/>
+
+                                          <label for="couleur">Couleur:</label>
+                                          <input type="color" /> <br/>
+
+                                          Pensez-vous savoir jouer à ce jeu ?
+                                          <input type="radio" name="ouinon" value="oui" id="oui" />
+                                          <label for="oui">Oui</label>
+
+                                          <input type="radio" name="ouinon" value="non" id="non" />
+                                          <label for="non">Non</label> <br />
+
+                                          <label for="commentaire">Commentez:</label> <br/>
+                                          <textarea name="commentaire" id="commentaire" rows="3" cols="30"></textarea>
+
+                                    </fieldset>
+                                    
+                                    </p>
+
+                                    <input type="submit" value="Envoyer" />
+
+                              </form>
+
+                        </article>
+
+                  </section>
+
+
+                  <section id="exp">
+
+                        <article id="explications">
+                              <h3>Explications</h3>
+
+                              <p>
+                                    Le but du jeu, est de placer <strong>huit reines</strong> d’un jeu d’échecs sur un échiquier de 8 x 8 cases sans que
+                                    les reines ne puissent se <strong>menacer mutuellement</strong>, conformément aux règles du jeu d’échecs ( la couleur
+                                    des pièces étant ignorée ). <br/>
+                                    Par conséquent, deux reines ne devraient jamais partager la même : <br/>
+
+                                    <ul>
+                                          <li> <mark>Rangée</mark> </li>
+                                          <li> <mark>Colonne</mark> </li>
+                                          <li> <mark>Diagonale</mark> </li>
+                                    </ul>
+                              </p>
+
+                              <p>
+                                    Ce problème appartient au <strong>domaine des mathématiques</strong> et non à celui de la composition échiquéenne. <br/>
+                                    Simple mais trivial, ce problème sert souvent d’exemple pour illustrer des <strong>techniques de programmation</strong>.
+                              </p>
+                              
+                                     <aside id="jeu">
+
+                                    <h3>Jeu</h3>
+                              </aside>
+
+
+
+
+
+                              <aside id="rappel" id="aide">
+
+                                    <h3>Rappel</h3>
+
+                                          <p>
+                                                Vous avez oublié comment se déplacait une reine dans un plateau d'echec ? <br/>
+                                                Ne vous inquiétez pas, vous avez la réponse juste en dessous : <br/>
+                                          </p>
+
+                                          <img class="img" src="http://universechecs.free.fr/Regles/dame.gif"/>
+
+                              </aside>
+
+                        </article>
+
+
+                  </section>
+
+                  <section id="sol" id="solutions">
+
+                        <h3>Solutions</h3>
+
+                              <p>
+                                    Vous ne trouvez pas de solutions ? <br/>
+                                    Voici pour vous un lien vers les 12 solutions de ce jeu
+                                    <a id="lien" href="file:///Users/selin/Documents/Pro%202.html" title="Tu peux toujours trouver tout seul !">Les 12 solutions</a>
+                              </p>
+
+                  </section>
+
+                  <footer>
+
+                        <p id= "footer">
+                              Jeu fait par : Alexandre Weng et Alex Ye <br/>
+                              Site fait par : Selin Saglam <br/>
+                              Date : 2019
+                        </p>
+
+                  </footer>
+
+                  <script src="8reines.js"></script>
+                  <script src="regles.js"></script>
+                  <script src="ai.js"></script>
+                  
+            </body>
+      </html>
